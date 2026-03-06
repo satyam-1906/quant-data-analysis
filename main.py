@@ -8,7 +8,7 @@ import keyboard
 from matplotlib.animation import FuncAnimation
 
 
-ticker = yf.Ticker("MRF.NS")
+ticker = yf.Ticker("BTC-USD")
 
 def animate(i):
     data = ticker.history(period="1d", interval="1m")
@@ -33,6 +33,6 @@ try:
         plt.show()
         if keyboard.is_pressed('q'):
             print("Exiting...")
-            sys.exit()
+            quit()
 except Exception as e:
     print(f"Error fetching data: {e}")
